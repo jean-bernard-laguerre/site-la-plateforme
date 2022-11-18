@@ -1,0 +1,138 @@
+body, .header, .aws_header, .header_text, .header_message, .enterprise, .enterprise_articles, article, .formation, .article_button, form, .formation_articles, .article_actu,  footer, .footer_nav, .video_players ,.news_header, nav, .navmenu, .navmenu div, .actualité, .plateforme_resume {display: flex;}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.page_container, .article_actu div {flex: 1;}
+
+body, .header_text, .aws_header, .header_message, .enterprise, .enterprise_articles, article, .formation, .article_button, form {flex-direction: column;}
+
+nav {
+    flex-wrap: wrap;
+    height: 50px;
+    padding-left: 1%;
+}
+.navmenu {height: 100%;}
+
+nav, .navmenu{
+    z-index: 8;
+    justify-content: space-between;
+    align-items: center;
+}
+.navmenu div {
+    position: relative;
+    align-items: center;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition:.3s;
+}
+
+.navmenu div:hover {
+    background-color: #23365f;
+    color: white;
+    transition: .5s;
+}
+
+.header_text {
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.formation_articles, .actualité,  footer, .footer_nav, .video_players ,.news_header, .plateforme_resume {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.aws_header {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5f52007084a9065df692e007/1625487976628-3QJT5GV2E48KTZRI0MGS/CLOUD+SOLUTIONS_AWS_Banner.png?format=1500w);
+    background-size: cover;
+    min-height: 450px;
+    justify-content: space-around;
+}
+
+.videos {
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+
+.formation article, .article_actu {
+    width: 25%;
+    min-width: 300px;
+    border: 1px solid lightgray;
+    padding: 2%;
+    margin: 2%;
+}
+
+.enterprise_articles {
+    align-items: center;
+}
+
+.enterprise article {
+    width: 80%;
+    border: 1px solid lightgray;
+    padding: 2%;
+    margin: 2%;
+}
+
+.article_actu {
+    min-height: 350px;
+    border: none;
+    transition: .3s;
+}
+
+.article_actu:hover {
+    box-shadow: 0px 1px 16px 0px rgb(0 0 0 / 16%);
+    transition: .3s;
+}
+
+.form_container {
+    margin: 3% 3% 0 5%;
+    padding: 5%;
+    box-shadow: 0px -16px 16px 0px rgb(0 0 0 / 16%);
+}
+
+.form_articles {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.actu_img {border: 1px solid lightgray;}
+
+.header_message, .article_button, .formation h2, .enterprise h2{
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.accueil_button p, .article_button p, .aws_button p, .plateforme_button p{
+    width: fit-content;
+    color: white;
+    border-radius: 25px;
+    padding: .5em;
+    cursor: pointer;
+}
+
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+.header, nav, .enterprise article, .formation article, .plateforme_resume {box-shadow: 0px 1px 16px 0px rgb(0 0 0 / 16%);}
+.header_text, section, article, .container {padding: 3%;}
+.header img {max-width: 100%;height: auto;}
+footer {padding: 1%;}
+.footer_nav div {padding-left: 25px;}
+input, select, textarea {margin: 1%;}
+.accueil_button p {margin: auto;}
+.accueil_button p{background-color: rgb(180, 63, 102);}
+.article_button p{background-color: rgb(35, 54, 95);}
+.aws_button p{background-color: orange;}
+.plateforme_button p {background-color: black; color: antiquewhite;}
+.plateforme_header {background-color: rgb(255, 255, 143);}
+.header, .news_header, .aws_header, footer {
+    background-color: rgb(35, 54, 95);
+    color: white;
+}
