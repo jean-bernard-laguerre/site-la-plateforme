@@ -1,17 +1,19 @@
-body, .header, .aws_header, .header_text, .header_message, .enterprise, .enterprise_articles, article, .formation, .article_button, form, .formation_articles, .article_actu,  footer, .footer_nav, .video_players ,.news_header, nav, .navmenu, .navmenu div, .actualité, .plateforme_resume {display: flex;}
+body, .header, .aws_header, .aws_section, .news_header, .qui, .certification, .presentation, .header_text, .header_message, .enterprise, .enterprise_articles, article, .formation, .article_button, form, .formation_articles, .article_actu,  footer, .footer_nav, .video_players ,.news_header, nav, .navmenu, .navmenu div, .actualité, .plateforme_resume {display: flex;}
 
 body {
     margin: 0;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
-.page_container, .article_actu div {flex: 1;}
+.page_container, .article_actu div, header div , .news_header{flex: 1;}
 
 body, .header_text, .aws_header, .header_message, .enterprise, .enterprise_articles, article, .formation, .article_button, form {flex-direction: column;}
 
 nav {
+    height: fit-content;
+    min-height: 50px;
     flex-wrap: wrap;
-    height: 50px;
+    min-height: 50px;
     padding-left: 1%;
 }
 .navmenu {height: 100%;}
@@ -21,18 +23,15 @@ nav, .navmenu{
     justify-content: space-between;
     align-items: center;
 }
-.navmenu div {
-    position: relative;
-    align-items: center;
-    height: 100%;
+.navitem{
     padding-left: 5px;
     padding-right: 5px;
     transition:.3s;
 }
 
 .navmenu div:hover {
-    background-color: #23365f;
-    color: white;
+    color: #23365f;
+    font-size: large;
     transition: .5s;
 }
 
@@ -51,6 +50,17 @@ nav, .navmenu{
     background-image: url(https://images.squarespace-cdn.com/content/v1/5f52007084a9065df692e007/1625487976628-3QJT5GV2E48KTZRI0MGS/CLOUD+SOLUTIONS_AWS_Banner.png?format=1500w);
     background-size: cover;
     min-height: 450px;
+    justify-content: space-around;
+}
+
+.aws_section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.aws_section div {
+    width: 100%;
+    display: flex;
     justify-content: space-around;
 }
 
@@ -80,9 +90,23 @@ nav, .navmenu{
 }
 
 .article_actu {
+    box-shadow: 0px 1px 4px 0px rgb(0 0 0 / 16%);
     min-height: 350px;
+    max-width: 250px;
     border: none;
     transition: .3s;
+    padding: 0;
+}
+
+.certification div {
+    flex: 1;
+    min-width: 150px;
+    padding: 1%;
+}
+
+.qui p, .qui div {
+    flex: 1;
+    padding: 1%;
 }
 
 .article_actu:hover {
@@ -117,15 +141,31 @@ nav, .navmenu{
     padding: .5em;
     cursor: pointer;
 }
+.button {transition: .1s;}
+.button:hover {
+    letter-spacing: 1px;
+    transition: .2s;
+}
+
+button {
+    background-color: rgb(35, 54, 95);
+    color: white;
+    padding: 1%;
+    border-radius: 25px;
+    border: none;
+}
 
 li {list-style: none;}
 a {text-decoration: none; color: inherit;}
 .header, nav, .enterprise article, .formation article, .plateforme_resume {box-shadow: 0px 1px 16px 0px rgb(0 0 0 / 16%);}
-.header_text, section, article, .container {padding: 3%;}
+.header_text, section, article, .container {padding: 3% 10% 3%;}
+.header_text , .aws_header , .plateforme_header {font-size: max(2vw, 30px);}
+.header_message, .aws_button, .plateforme_button, .news_header{font-size: max(1.5vw, 20px);}
 .header img {max-width: 100%;height: auto;}
 footer {padding: 1%;}
+iframe {padding: 1%;}
 .footer_nav div {padding-left: 25px;}
-input, select, textarea {margin: 1%;}
+input, select, textarea {margin: 1%; padding: 1%;}
 .accueil_button p {margin: auto;}
 .accueil_button p{background-color: rgb(180, 63, 102);}
 .article_button p{background-color: rgb(35, 54, 95);}
